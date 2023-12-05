@@ -59,9 +59,9 @@ def  cumulative_distribution(kab_counts, en_counts, max_threshold=25)
     plt.grid(True)
     plt.show()
 
-def show_lost(kab_counts ,en_counts, kab_tresh, en_tresh):
-    en_filtered_counts = [x for x in en_counts if x <= 21]
-    kab_filtered_counts = [x for x in kab_counts if x <= 22]
+def show_lost(kab_counts ,en_counts, kab_tresh = 22, en_tresh = 21):
+    en_filtered_counts = [x for x in en_counts if x <= en_tresh]
+    kab_filtered_counts = [x for x in kab_counts if x <= kab_tresh]
     
     # Calculate how many tokens we're leaving for en and kab
     en_tokens_left = len(en_counts) - len(en_filtered_counts) 
