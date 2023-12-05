@@ -32,7 +32,7 @@ def token_count_distributions(kab_counts, en_counts, bins=100, xlim=50):
     plt.tight_layout()
     plt.show()
 
-def  cumulative_distribution(kab_counts, en_counts, max_threshold=25)
+def  cumulative_distribution(kab_counts, en_counts, max_threshold=25):
     
     # Calculate the cumulative distribution for filtered counts
     en_cumulative = np.arange(1, len(en_counts) + 1) / len(en_counts)
